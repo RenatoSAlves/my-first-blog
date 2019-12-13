@@ -7,14 +7,12 @@
         <h1><a href="/">Blog Django Girls</a></h1>
     </div>
 
+    {% for post in posts %}
     <div>
-        {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-        {% endfor %}
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    {% endfor %}
 </body>
 </html>
